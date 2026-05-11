@@ -251,3 +251,12 @@ CREATE TABLE grades (
     validee BOOLEAN DEFAULT false,
     date_saisie TIMESTAMP DEFAULT now()
 );
+
+
+-- Indexes utiles
+CREATE INDEX idx_subjects_semester ON subjects(semester_id);
+CREATE INDEX idx_subjects_statut ON subjects(statut);
+CREATE INDEX idx_applications_student ON applications(student_id);
+CREATE INDEX idx_memoires_student ON memoires(student_id);
+CREATE INDEX idx_documents_memoire ON documents(memoire_id);
+CREATE INDEX idx_observations_memoire ON observations(memoire_id);
